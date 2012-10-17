@@ -1,5 +1,5 @@
 development:
-  adapter: em_postgresql
+  adapter: postgresql
   encoding: unicode
   database: rails-benchmark-dev
   pool: 4
