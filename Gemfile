@@ -48,13 +48,14 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem 'thin'
+gem 'rainbows'
 
 gem 'pg'
 
 # For async support
 gem 'rack-fiber_pool', :require => 'rack/fiber_pool'
 gem 'eventmachine', '>= 1.0.0'
-#gem 'em-postgresql-adapter', :git => 'git://github.com/leftbee/em-postgresql-adapter.git'
+gem 'em-postgresql-adapter', :git => 'git://github.com/leftbee/em-postgresql-adapter.git'
 gem 'em-synchrony', :git => 'git://github.com/igrigorik/em-synchrony.git',
                     :require => ['em-synchrony',
                                  'em-synchrony/activerecord']
