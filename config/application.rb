@@ -58,5 +58,13 @@ module RailsBenchmark
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    # Customize the DB connection
+    # TODO: this is a hacking-way to solve the problem on Heroku that the db adapter is always 'postgresql',
+    # regardless we use a custom buildpack with 'em_postgresql'
+    config.after_initialize do
+      ActiveRecord::Base.connection_pool.disconnect!
+      ActiveRecord::Base.establish_connection(Rails.configuration.database_configuration[Rails.env])
+    end
   end
 end
