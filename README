@@ -6,6 +6,11 @@ heroku config:add BUILDPACK_URL=https://github.com/heroku/heroku-buildpack-ruby
 
   See more at: https://devcenter.heroku.com/articles/buildpacks#using-a-custom-buildpack
 
+  The reason why we use the kidlab/heroku-buildpack-ruby instead of Heroku default buildpack is because we need to write a customized database.yml file the use 'em_postgresql' adapter. 
+  While Heroku Ruby buildpack always uses 'postgresql' adapter.
+  Please note that the above custom buildpack only uses 'em_postgresql' when you specify the gem 'em-postgresql-adapter' in the Gemfile.
+  
+  
   Set this env variables to Heroku:
     heroku config:add BUILDPACK_URL=https://github.com/kidlab/heroku-buildpack-ruby --app rails-benchmark
     heroku config:add DATABASE_POOL=4 --app rails-benchmark
