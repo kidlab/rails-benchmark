@@ -34,7 +34,10 @@ gem 'jquery-rails'
 
 gem 'newrelic_rpm'
 
+# Thin server for development
 gem 'thin'
+
+# Rainbows for production
 gem 'rainbows'
 
 gem 'pg'
