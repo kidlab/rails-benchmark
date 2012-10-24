@@ -1,7 +1,7 @@
 Welcome to Rails Benchmark
 ==========================
 
-This app is a demo of using with [Rack::FiberPool](https://github.com/mperham/rack-fiber_pool) and [EventMachine](https://github.com/eventmachine/eventmachine) to support asynchronous requests. To deploy it to Heroku, use the build pack https://github.com/kidlab/heroku-buildpack-ruby
+This app is a demo of using [Rack::FiberPool](https://github.com/mperham/rack-fiber_pool) and [EventMachine](https://github.com/eventmachine/eventmachine) to support asynchronous requests. To deploy it to Heroku, use the build pack https://github.com/kidlab/heroku-buildpack-ruby
 
 See more at: https://devcenter.heroku.com/articles/buildpacks#using-a-custom-buildpack
 
