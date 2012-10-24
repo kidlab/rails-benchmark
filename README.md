@@ -30,4 +30,4 @@ Caution
 ------- 
 * Heroku Postgres Dev supports only 20 connections pool, see: https://devcenter.heroku.com/articles/heroku-postgres-starter-tier#limits
 * If you use Unicorn or Rainbows with em_postgresql adapter, be careful when configuring the worker_processes and the DB pool.
-    - For example, if the `worker_processes` is 4, the DB pool should be 4, because we will have 4 x 5 = 16 connections.
+    - For example, if the `worker_processes` is 4, the DB pool should be 4, because we will have 4 x 4 = 16 connections.
