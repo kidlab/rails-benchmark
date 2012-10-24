@@ -1,7 +1,7 @@
 Welcome to Rails Benchmark
 ==========================
 
-This app is running with [Rack::FiberPool](https://github.com/mperham/rack-fiber_pool) to support asynchronous requests. To deploy it to Heroku, use the build pack https://github.com/kidlab/heroku-buildpack-ruby
+This app is a demo of using with [Rack::FiberPool](https://github.com/mperham/rack-fiber_pool) and [EventMachine](https://github.com/eventmachine/eventmachine) to support asynchronous requests. To deploy it to Heroku, use the build pack https://github.com/kidlab/heroku-buildpack-ruby
 
 See more at: https://devcenter.heroku.com/articles/buildpacks#using-a-custom-buildpack
 
@@ -15,7 +15,11 @@ Set this env variables to Heroku:
     heroku config:add BUILDPACK_URL=https://github.com/kidlab/heroku-buildpack-ruby --app rails-benchmark
     heroku config:add DATABASE_POOL=4 --app rails-benchmark
     heroku config:add DATABASE_CONNECTIONS=5 --app rails-benchmark
-  
+
+You can check the live version of the app running at http://rails-benchmark.herokuapp.com/:
+
+    ab -c 220 -n 2000 http://rails-benchmark.herokuapp.com/api/categories
+
 References
 ---------
 * https://github.com/mperham/rack-fiber_pool
